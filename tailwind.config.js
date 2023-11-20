@@ -16,7 +16,7 @@ module.exports = {
         "agendalo-blue-300": '#058d9d',
         "agendalo-blue-500": '#016d93',
         "agendalo-blue-700": '#011f51',
-      }
+      },
     },
   },
   plugins: [],
