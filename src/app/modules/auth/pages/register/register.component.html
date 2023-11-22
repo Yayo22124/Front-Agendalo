@@ -1,1 +1,85 @@
-<p>register works!</p>
+<!-- container -->
+<main class="flex w-screen h-screen overflow-hidden bg-neutral-100/50">
+
+    <!-- left container -->
+    <section class="w-3/6  flex-col h-screen px-4 justify-between hidden md:flex py-5">
+        <div
+            class="flex  items-center self-center mb-3 justify-center h-1/6 shadow-lg w-1/3 rounded-md px-2 bg-agendalo-orange-700">
+            <h1 class="agendalo-font text-3xl text-white cursor-pointer" routerLink="/home">Agéndalo</h1>
+        </div>
+        <ul class="flex flex-col gap-4 self-center">
+            <li>
+                <div class="flex gap-1 mb-3">
+                    <mat-icon class="font-extrabold text-agendalo-blue-300">done</mat-icon>
+                    <h1 class="font-medium text-xl font-secular-one">Comienza a crecer tu negocio</h1>
+                </div>
+                <p class="indent-6 text-gray-500 ">Pública y comparte tus servicios en línea desde la plataforma
+                    <strong>Agéndalo</strong>.
+                </p>
+            </li>
+            <li>
+                <div class="flex gap-1 mb-3">
+                    <mat-icon class="font-extrabold text-agendalo-blue-300">done</mat-icon>
+                    <h1 class="font-medium text-xl font-secular-one">Encuentra lo que necesitas</h1>
+                </div>
+                <p class="indent-6 text-gray-500 ">Explora el catálogo de servicios ofrecido por cada usuario en la
+                    plataforma.</p>
+            </li>
+            <li>
+                <div class="flex gap-1 mb-3">
+                    <mat-icon class="font-extrabold text-agendalo-blue-300">done</mat-icon>
+                    <h1 class="font-medium text-xl font-secular-one">Todo cerca de ti</h1>
+                </div>
+                <p class="indent-6 text-gray-500 "> Encuentra servicios y ofertas cercanas a ti.
+                </p>
+            </li>
+        </ul>
+        <ul class="flex gap-2 self-center">
+            <li class="text-sm">
+                <a href="" mat-stroked-button color="accent">
+                    <mat-icon class="mat-18">help</mat-icon>
+                    Ayuda
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- right container -->
+    <section
+        class="md:w-3/6 flex flex-col items-center h-screen rounded-tl-[7%] shadow-2xl relative p-4 w-full overflow-y-auto">
+        <!-- back icon -->
+        <a mat-icon-button href="/home/"
+            class=" absolute top-7 left-7 cursor-pointer hover:text-agendalo-orange-700/70 hover:scale-105 active:scale-95">
+            <mat-icon class="font-extrabold">arrow_back</mat-icon>
+        </a>
+        <header>
+            <div
+                class="items-center flex md:hidden  justify-center h-auto shadow-lg w-1/4 rounded-bl-xl p-5 bg-agendalo-orange-700 absolute top-0 right-0">
+                <h1 class="agendalo-font text-xl text-white cursor-pointer" routerLink="/home">Agéndalo</h1>
+            </div>
+        </header>
+        <form class="w-full h-full flex flex-col items-center gap-6 mt-16 relative">
+            <h1 class="text-center text-2xl font-bold mb-10">Regístrate</h1>
+            <mat-form-field class=" w-full ">
+                <mat-label>Nombre Completo</mat-label>
+                <input matInput placeholder="alguien@ejemplo.com">
+            </mat-form-field>
+            <mat-form-field class=" w-full ">
+                <mat-label>Correo Electrónico</mat-label>
+                <input matInput placeholder="alguien@ejemplo.com">
+            </mat-form-field>
+            <mat-form-field class="w-full">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password">
+            </mat-form-field>
+            <mat-form-field class="w-full">
+                <mat-label>Confirmar Contraseña</mat-label>
+                <input matInput type="password">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="text-white w-1/2 py-3">Iniciar Sesión</button>
+            <div class=" w-full flex self-center">
+                <span class="mt-8 text-neutral-500">¿Ya tienes una cuenta? <a routerLink="/auth/login" class="text-agendalo-blue-300 font-medium hover:underline hover:scale-105 active:scale-95">Inicia Sesión</a></span>
+            </div>
+        </form>
+    </section>
+</main>
