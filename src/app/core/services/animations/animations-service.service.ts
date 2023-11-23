@@ -19,5 +19,12 @@ export class AnimationsServiceService {
     ]),
   ]);
 
+  static slideInFromBottom = trigger('slideInFromBottom', [
+    state('void', style({ transform: 'translateY(100%)' })),
+    transition(':enter', [
+      animate('700ms ease-out', style({ transform: 'translateY(0)' })),
+    ]),
+  ]);
+
   constructor() {}
 }
