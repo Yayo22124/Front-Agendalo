@@ -67,6 +67,13 @@
                 <mat-label>Correo Electrónico</mat-label>
                 <input matInput placeholder="alguien@ejemplo.com">
             </mat-form-field>
+            <!-- Age -->
+            <mat-form-field class="w-full">
+                <mat-label>Fecha de Nacimiento</mat-label>
+                <input matInput [matDatepicker]="picker" placeholder="Selecciona una fecha">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
             <mat-form-field class="w-full">
                 <mat-label>Contraseña</mat-label>
                 <input matInput type="password">

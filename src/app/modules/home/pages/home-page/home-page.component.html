@@ -1,2 +1,77 @@
-<app-nav-bar></app-nav-bar>
-<p>home-page works!</p>
+<app-nav-bar />
+<main>
+    <section class="h-screen p-4 flex md:items-center items-start justify-center" [@slideIn]>
+        <mat-tab-group animationDuration="800ms" dynamicHeight class="shadow-xl md:w-3/6 w-11/12" color="accent">
+            <mat-tab>
+                <!-- tab label -->
+                <ng-template mat-tab-label>
+                    <mat-icon>dataset</mat-icon>
+                    Ofrece Servicios
+                </ng-template>
+                <!-- tan content -->
+                <h1 class="mat-tab-title text-3xl font-extrabold mt-3 mb-6 ">¿Listo para llevar tu negocio al siguiente nivel?</h1>
+                <p class="text-neutral-500">Crea tu <strong class="font-medium">Cuenta de Proveedor</strong> y
+                    comienza a ofrecer tus servicios en <strong class="font-medium">Agéndalo</strong> para subir de nivel tu negocio y entrar en la web facílmente.
+                </p>
+                <a mat-flat-button routerLink="/auth/register" color="accent" class="mb-4 mt-6 mx-auto text-white" matTooltip="Go to register">Crea tu cuenta de Proveedor</a>
+            </mat-tab>
+            <mat-tab>
+                <!-- tab label -->
+                <ng-template mat-tab-label>
+                    <mat-icon>work</mat-icon>
+                    Nosotros
+                </ng-template>
+                <!-- tan content -->
+                <h1 class="mat-tab-title text-3xl font-bold mt-3 mb-6 ">Bienvenido a Agéndalo!</h1>
+                <p class="text-neutral-500">En <strong class="font-medium">Agéndalo</strong>, creemos en conectar a las personas a través del intercambio eficiente de servicios. Nuestra plataforma está diseñada para potenciar ausuarios en ofrecer y contratar servicios sin problemas.
+                </p>
+                <button mat-stroked-button matTooltip="Get more info about us" color="accent" class="mb-4 mt-6 mx-auto">Leer más</button>
+            </mat-tab>
+            <mat-tab>
+                <!-- tab label -->
+                <ng-template mat-tab-label>
+                    <mat-icon>account_tree</mat-icon>
+                    ¿Cómo Funciona Agéndalo?
+                </ng-template>
+                <!-- tan content -->
+                <h1 class="mat-tab-title text-3xl font-bold mt-3 mb-6 ">La mejor plataforma de servicios</h1>
+                <p class=" text-neutral-500"><strong>Agéndalo</strong> es una plataforma amigable con el usuario y fácil de usar para que cualquiera pueda ofrecer y contratar todo tipo de servicios desde la comodidad de su hogar y llevando a cabo un acuerdo cliente-proveedor de la mejor manera.
+                </p>
+                <button mat-stroked-button color="accent" matTooltip="Visit the service offer " class="mb-4 mt-6 mx-auto">Buscar Servicios</button>
+            </mat-tab>
+        </mat-tab-group>
+    </section>
+    <section class="bg-agendalo-orange-500 text-white w-full h-[70vh] flex flex-col p-4" [@slideIn]>
+        <h1 class="font-kanit text-4xl max-w-3xl mb-3">A platform to connect or publish services with the people.</h1>
+        <div class="w-full grid gap-x-4 gap-y-2 grid-cols-6 grid-rows-6">
+            <div class="col-span-6 row-span-2 bg-neutral-200/40 p-3">
+                <h1 class="flex items-center gap-2 text-xl font-medium">
+                    <mat-icon class="pr-1">search</mat-icon>
+                    <span>
+                        Discover and Explore services.
+                    </span>
+                </h1>
+                <p>Publish your services on <strong>Agéndalo</strong> or discover other services on the best platform to connect with all types of services and with the best client-supplier communication.</p>
+            </div>
+            <div class="col-span-3 row-span-2 bg-neutral-200/40 p-3">
+                <h1 class="flex items-center gap-2 text-xl font-medium">
+                    <mat-icon class="pr-1">payments</mat-icon>
+                    <span>
+                        Increase your profits.
+                    </span>
+                </h1>
+                <p>With <strong>Agéndalo</strong>, you can increase the profits of your business and get more clients on your enviroment.</p>
+            </div>
+            <div class="col-span-3 row-span-2 bg-neutral-200/40 p-3">
+                <h1 class="flex items-center gap-2 text-xl font-medium">
+                    <mat-icon class="pr-1">pin_drop</mat-icon>
+                    <span>
+                        Connect with your surroundings.
+                    </span>
+                </h1>
+                <p>Register with your location and find out about the offers closest to you.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<app-footer [@slideIn]></app-footer>

@@ -1,3 +1,89 @@
-<mat-toolbar color="primary" class="text-white">
-    <h1 class="agendalo-font text-2xl">Agéndalo</h1>
+<mat-toolbar>
+    <mat-toolbar-row class="w-full md:flex hidden justify-between">
+        <div class="flex items-center justify-center h-full px-2 bg-agendalo-orange-700">
+            <h1 class="agendalo-font text-2xl text-white cursor-pointer" routerLink="/home">Agéndalo</h1>
+        </div>
+        <!-- Navigation buttons -->
+        <ul class="flex gap-3 font-medium">
+            <li>
+                <button mat-button routerLink="/home">Inicio</button>
+            </li>
+            <li>
+                <button mat-button routerLink="/services">Agenda</button>
+            </li>
+            <li>
+                <button mat-button [matMenuTriggerFor]="menuRef" (menuClosed)="onMenuClosed()"
+                    (menuOpened)="onMenuOpened()">
+                    <mat-icon class="mat-18" *ngIf="menu">expand_more</mat-icon>
+                    <mat-icon class="mat-18" *ngIf="!menu">expand_less</mat-icon>
+                    Servicios
+                </button>
+                <mat-menu #menuRef="matMenu" xPosition="before" yPosition="below">
+                    <button mat-menu-item>
+                        <mat-icon class="mat-18">search</mat-icon>
+                        Buscar Servicios
+                    </button>
+                    <button mat-menu-item routerLink="/services">
+                        <mat-icon class="mat-18">add_circle</mat-icon>
+                        Publicar Servicio
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>list</mat-icon>
+                        Tus servicios
+                    </button>
+                </mat-menu>
+            </li>
+        </ul>
+        <!-- Login/Register buttons -->
+        <ul class="flex gap-3">
+            <li>
+                <button mat-flat-button matTooltip="Login with your account" class="rounded-full"
+                    routerLink="/auth/login">Iniciar sesión</button>
+            </li>
+            <li>
+                <button mat-flat-button matTooltip="Register in Agéndalo" color="primary"
+                    class="text-white rounded-full" routerLink="/auth/register">Crear cuenta</button>
+            </li>
+        </ul>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="flex md:hidden items-center justify-between">
+        <!-- Mat Menu -->
+        <button mat-icon-button [matMenuTriggerFor]="menuResponsive" (menuClosed)="onMenuClosed()" (menuOpened)="onMenuOpened()">
+            <mat-icon *ngIf="menu">more_vert</mat-icon>
+            <mat-icon *ngIf="!menu">menu</mat-icon>
+        </button>
+        <mat-menu #menuResponsive="matMenu" class="p-2 gap-2">
+            <button mat-menu-item routerLink="/home">
+                <mat-icon>home</mat-icon>
+                Inicio
+            </button>
+            <button mat-menu-item routerLink="/services">
+                <mat-icon>view_agenda</mat-icon>
+                Agenda
+            </button>
+            <button mat-menu-item [matMenuTriggerFor]="menuRef" (menuClosed)="onMenuClosed()"
+                    (menuOpened)="onMenuOpened()">
+                    Servicios
+                </button>
+            <button mat-menu-item color="primary"
+                class="mb-3 text-white rounded-full bg-agendalo-blue-300/90 shadow-lg flex items-center justify-center hover:bg-agendalo-blue-300/60"
+                routerLink="/auth/login">
+                <mat-icon class="text-white">login</mat-icon>
+                <span class="text-white text-center">
+                    Iniciar sesión
+                </span>
+            </button>
+            <button mat-menu-item color="primary"
+                class="text-white rounded-full bg-agendalo-orange-700 shadow-lg flex items-center justify-center hover:bg-agendalo-orange-700/80"
+                routerLink="/auth/register">
+                <mat-icon class="text-white">person_add</mat-icon>
+                <span class="text-white text-center">
+                    Regístrate
+                </span>
+            </button>
+        </mat-menu>
+        <div class="flex items-center justify-center h-full px-2 bg-agendalo-orange-700">
+            <h1 class="agendalo-font text-2xl text-white cursor-pointer" routerLink="/home">Agéndalo</h1>
+        </div>
+    </mat-toolbar-row>
 </mat-toolbar>

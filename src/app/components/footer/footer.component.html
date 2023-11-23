@@ -1,1 +1,40 @@
-<p>footer works!</p>
+<mat-divider></mat-divider>
+<footer class="w-full bg-neutral-200 grid grid-cols-8 p-8">
+    <!-- Logo and Socials -->
+    <section class="flex flex-col items-center justify-center col-span-2 gap-2 ">
+        <div class="flex items-center justify-center h-full p-4 rounded-md bg-agendalo-orange-700 shadow-xl">
+            <h1 class="agendalo-font text-2xl text-white cursor-pointer" routerLink="/home">Agéndalo</h1>
+        </div>
+    </section>
+    <!-- Links -->
+    <section class="flex  col-span-4 justify-center">
+        <div class="w-3/6 flex flex-col justify-center">
+            <h2 class="font-bold font-kanit text-lg">Nuestra Empresa</h2>
+            <ul class="list-disc font-medium text-neutral-600">
+                <li class="hover:underline hover:text-neutral-600/40 cursor-pointer active:scale-95">Inicio</li>
+                <li class="hover:underline hover:text-neutral-600/40 cursor-pointer active:scale-95">¿Qué es Agéndalo?</li>
+                <li class="hover:underline hover:text-neutral-600/40 cursor-pointer active:scale-95">Nosotros</li>
+                <li class="hover:underline hover:text-neutral-600/40 cursor-pointer active:scale-95">¿Cómo funciona Agéndalo?</li>
+            </ul>
+        </div>
+        <div class="w-3/6 flex flex-col justify-center">
+            <h2 class="font-bold font-kanit text-lg">Explora Agéndalo</h2>
+            <ul class="list-disc font-medium text-neutral-600">
+                <li class="hover:underline hover:text-neutral-600/40 cursor-pointer active:scale-95">Buscar Servicios</li>
+                <li class="hover:underline hover:text-neutral-600/40 cursor-pointer active:scale-95">Ofrecer Servicios</li>
+                <li class="hover:underline hover:text-neutral-600/40 cursor-pointer active:scale-95">Agenda</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Socials -->
+    <section class="flex flex-col col-span-2 items-center justify-center">
+        <h2 class="font-semibold">Síguenos en:</h2>
+        <img src="/src/asssets/img/icons/facebook-brand.svg" alt="Facebook">
+    </section>
+</footer>
+<mat-divider></mat-divider>
+<!-- Copyright -->
+<section class=" flex font-medium gap-2 items-center justify-center p-1 text-sm text-neutral-300 bg-agendalo-blue-500 w-full">
+    <mat-icon >copyright</mat-icon>
+    <span>Agéndalo 2023 - 2025</span>
+</section>

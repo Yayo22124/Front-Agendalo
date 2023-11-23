@@ -123,10 +123,38 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+strong {
+  font-weight: 500;
+}
+
 //! Agendalo Font Class
 .agendalo-font {
   // font-family: 'Anton', sans-serif;
   // font-family: 'Secular One', sans-serif;
   // font-family: 'Concert One', sans-serif;
   font-family: 'Agbalumo', sans-serif;
+}
+
+.font-kanit {
+  font-family: 'Kanit', sans-serif;
+}
+
+.font-secular-one {
+  font-family: 'Secular One', sans-serif;
+}
+
+.font-fira-sans {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+
+
+// Mat tabs
+.mat-mdc-tab-group-dynamic-height .mat-mdc-tab-body-content {
+  padding: 20px;
+}
+
+.mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+  color: black;
+  font-weight: 500;
 }
