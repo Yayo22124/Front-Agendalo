@@ -58,17 +58,17 @@
                 <h1 class="agendalo-font text-xl text-white cursor-pointer" routerLink="/home">Agéndalo</h1>
             </div>
         </header>
-        <form class="w-full h-full flex flex-col items-center gap-6 mt-16 relative">
+        <form [formGroup]="login" (ngSubmit)="postCredentials()" class="w-full h-full flex flex-col items-center gap-6 mt-16 relative">
             <h1 class="text-center text-2xl font-bold mb-10">Inicia Sesión</h1>
             <mat-form-field class=" w-full ">
                 <mat-label>Correo Electrónico</mat-label>
-                <input matInput placeholder="alguien@ejemplo.com">
+                <input matInput formControlName="email" id="name" placeholder="alguien@ejemplo.com">
             </mat-form-field>
             <mat-form-field class="w-full">
                 <mat-label>Contraseña</mat-label>
-                <input matInput type="password">
+                <input matInput formControlName="password" id="password" type="password">
             </mat-form-field>
-            <button mat-raised-button color="primary" class="text-white w-1/2">Iniciar Sesión</button>
+            <button mat-raised-button [disabled]="login.invalid" color="primary" class="text-white w-1/2">Iniciar Sesión</button>
             <div class="absolute bottom-5 w-full flex justify-between">
                 <span class="mt-8  text-neutral-500"><a routerLink="/auth/register" class="text-agendalo-blue-300 font-medium hover:underline hover:scale-105 active:scale-95">¿Olvidó su contraseña?</a></span>
                 <span class="mt-8 text-neutral-500">¿No tienes una cuenta? <a routerLink="/auth/register" class="text-agendalo-blue-300 font-medium hover:underline hover:scale-105 active:scale-95">Crea una</a></span>

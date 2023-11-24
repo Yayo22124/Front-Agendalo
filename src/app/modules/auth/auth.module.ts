@@ -1,3 +1,5 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AuthRoutingModule } from './auth-routing.module';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './pages/login/login.component';
@@ -8,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgModule } from '@angular/core';
 import { RegisterComponent } from './pages/register/register.component';
@@ -24,7 +27,10 @@ import { RegisterComponent } from './pages/register/register.component';
     MatInputModule,
     MatTooltipModule,
     MatButtonModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatRadioModule
   ],
 })
 export class AuthModule {}

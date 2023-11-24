@@ -58,35 +58,59 @@
                 <h1 class="agendalo-font text-xl text-white cursor-pointer" routerLink="/home">Agéndalo</h1>
             </div>
         </header>
-        <form class="w-full h-full flex flex-col items-center gap-6 mt-16 relative">
+        <form [formGroup]="register" class="w-full h-full flex flex-col items-center gap-6 mt-16 relative">
             <h1 class="text-center text-2xl font-bold mb-10">Regístrate</h1>
+            <!-- Name -->
             <mat-form-field class=" w-full ">
-                <mat-label>Nombre Completo</mat-label>
-                <input matInput placeholder="alguien@ejemplo.com">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="name" id="name" placeholder="Juan">
             </mat-form-field>
+            <!-- LastName -->
+            <mat-form-field class=" w-full ">
+                <mat-label>Apellidos</mat-label>
+                <input matInput formControlName="lastName" id="lastName" placeholder="Ortega Carballo">
+            </mat-form-field>
+            <!-- Email -->
             <mat-form-field class=" w-full ">
                 <mat-label>Correo Electrónico</mat-label>
-                <input matInput placeholder="alguien@ejemplo.com">
+                <input matInput formControlName="email" id="email" placeholder="alguien@ejemplo.com">
             </mat-form-field>
+            <!-- Gender -->
+            <label>Género:</label>
+            <mat-radio-group formControlName="gender" id="gender">
+                <mat-radio-button value="Masculino">
+                    Masculino
+                </mat-radio-button>
+                <mat-radio-button value="Femenino">
+                    Femenino
+                </mat-radio-button>
+                <mat-radio-button value="No Binario">
+                    No Binario
+                </mat-radio-button>
+            </mat-radio-group>
             <!-- Age -->
             <mat-form-field class="w-full">
                 <mat-label>Fecha de Nacimiento</mat-label>
-                <input matInput [matDatepicker]="picker" placeholder="Selecciona una fecha">
+                <input matInput formControlName="birthDate" id="birthDate" [matDatepicker]="picker" placeholder="Selecciona una fecha">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
+            <!-- Password -->
             <mat-form-field class="w-full">
                 <mat-label>Contraseña</mat-label>
-                <input matInput type="password">
+                <input matInput formControlName="password" id="password" type="password">
             </mat-form-field>
+            <!-- Confirm Password -->
             <mat-form-field class="w-full">
                 <mat-label>Confirmar Contraseña</mat-label>
-                <input matInput type="password">
+                <input matInput formControlName="confirmPassword" id="confirmPassword" type="password">
             </mat-form-field>
-
-            <button mat-raised-button color="primary" class="text-white w-1/2 py-3">Iniciar Sesión</button>
+            <!-- Submit Button -->
+            <button mat-raised-button color="primary" [disabled]="register.invalid" class="text-white w-1/2 py-3">Iniciar Sesión</button>
             <div class=" w-full flex self-center">
-                <span class="mt-8 text-neutral-500">¿Ya tienes una cuenta? <a routerLink="/auth/login" class="text-agendalo-blue-300 font-medium hover:underline hover:scale-105 active:scale-95">Inicia Sesión</a></span>
+                <span class="mt-8 text-neutral-500">¿Ya tienes una cuenta? <a routerLink="/auth/login"
+                        class="text-agendalo-blue-300 font-medium hover:underline hover:scale-105 active:scale-95">Inicia
+                        Sesión</a></span>
             </div>
         </form>
     </section>
