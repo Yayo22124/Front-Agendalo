@@ -58,7 +58,7 @@
                 <h1 class="agendalo-font text-xl text-white cursor-pointer" routerLink="/home">Agéndalo</h1>
             </div>
         </header>
-        <form [formGroup]="register" class="w-full h-full flex flex-col items-center gap-6 mt-16 relative">
+        <form [formGroup]="register" (submit)="onSubmit()" class="w-full h-full flex flex-col items-center gap-6 mt-16 relative">
             <h1 class="text-center text-2xl font-bold mb-10">Regístrate</h1>
             <!-- Name -->
             <mat-form-field class=" w-full ">
